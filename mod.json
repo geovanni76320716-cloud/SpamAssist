@@ -1,11 +1,17 @@
 {
-  "geode": "v5.11.2",
-  "gd": {
-    "android": "2.2081"
-  },
-  "id": "geovanni.spamassist",
-  "name": "Spam Assist",
-  "version": "v1.0.0",
-  "developer": "Geovanni",
-  "description": "Manual click enhancement for Geometry Dash"
+    "geode": "5.11.2",
+    "gd": {
+        "android": ["2.2081"]
+    },
+    "id": "geovanni.spamassist",
+    "name": "SpamAssist",
+    "version": "1.0.0",
+    "developer": "Geovanni",
+    "description": "SpamAssist mod for Geometry Dash",
+    "tags": [
+        "utility"
+    ],
+    "dependencies": {
+        "geode.node-ids": ">=1.0.0"
+    }
 }
