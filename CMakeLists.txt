@@ -1,14 +1,18 @@
-
 cmake_minimum_required(VERSION 3.21)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(SpamAssist VERSION 1.0.0)
 
-set(CMAKE_CXX_STANDARD 23)
-
-add_subdirectory(${GEODE_SDK} geode)
-
-file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
+
+if (NOT DEFINED ENV{GEODE_SDK})
+    message(FATAL_ERROR "Geode SDK no encontrado")
+endif()
+
+add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 setup_geode_mod(${PROJECT_NAME})
