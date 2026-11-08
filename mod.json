@@ -1,11 +1,11 @@
 {
- "geode": "v6.0.0-alpha.1",
+  "geode": "6.0.0-alpha.1",
   "gd": {
     "android": "2.2081"
   },
   "id": "geovanni.spamassist",
   "name": "Spam Assist",
-  "version": "v1.0.0",
+  "version": "1.0.0",
   "developer": "Geovanni",
   "description": "Manual click enhancement for Geometry Dash"
 }
