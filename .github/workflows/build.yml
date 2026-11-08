@@ -1,3 +1,4 @@
+
 name: Build Spam Assist
 
 on:
@@ -6,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -14,9 +16,10 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         with:
           target: Android64
+          sdk: latest
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload mod
+        uses: actions/upload-artifact@v4
         with:
           name: SpamAssist
           path: ${{ steps.build.outputs.build-output }}/*.geode
-        
