@@ -1,13 +1,11 @@
 {
     "geode": "5.11.2",
-    "gd": "2.2081",
+    "gd": {
+        "android": "2.2081"
+    },
     "id": "geovanni.spamassist",
     "name": "SpamAssist",
     "version": "1.0.0",
     "developer": "Geovanni",
-    "description": "Spam Assist mod for Geometry Dash",
-    "tags": [
-        "enhancement"
-    ],
-    "dependencies": {}
+    "description": "Spam Assist for Geometry Dash"
 }
